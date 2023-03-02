@@ -1,0 +1,7 @@
+site_name: tap-vwc-search
+
+nav:
+  - Home: index.md
+
+plugins:
+  - techdocs-core

@@ -1,0 +1,19 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: tap-vwc-search
+  annotations:
+    backstage.io/kubernetes-id: tap-vwc-search
+    backstage.io/techdocs-ref: dir:.
+  links:
+    - url: http://172.16.131.9
+      title: WineMate Search v0.0.7
+      icon: dashboard
+spec:
+  type: service
+  owner: user:guest
+  lifecycle: experimental
+  system: tap-demo-system
+  consumesApi: vwc-server-api
+  dependsOn:
+    - component:tap-vwc-server

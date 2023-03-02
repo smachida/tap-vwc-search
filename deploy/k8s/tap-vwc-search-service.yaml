@@ -1,0 +1,15 @@
+# vwc-server.yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: tap-vwc-search
+  labels:
+    app: tap-vwc-search
+    backstage.io/kubernetes-id: tap-vwc-search
+spec:
+  type: LoadBalancer
+  ports:
+  - port: 80
+    targetPort: 80
+  selector:
+    app: tap-vwc-search

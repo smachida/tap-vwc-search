@@ -1,0 +1,28 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: tap-vwc-search
+  labels:
+    app: tap-vwc-search
+    backstage.io/kubernetes-id: tap-vwc-search
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: tap-vwc-search
+  template:
+    metadata:
+      labels:
+        app: tap-vwc-search
+        backstage.io/kubernetes-id: tap-vwc-search
+    spec:
+      containers:
+        - name: tap-vwc-search
+          image: harbor-prod.mp-tanzu-demo.com/apps/tap-vwc-search:latest
+          imagePullPolicy: Always
+          ports:
+          - containerPort: 80
+      imagePullSecrets:
+      - name: regcred-harbor-dev
+
