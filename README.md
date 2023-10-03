@@ -1,4 +1,4 @@
-# 概要 
+# 概要
 
 Wine Mates アプリケーション - Virtual Wine Cellar(VWC) ワイン検索アプリ:
 
